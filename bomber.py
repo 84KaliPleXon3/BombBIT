@@ -584,7 +584,7 @@ if not cc.strip() == "91":
     cnt = 0
     if pn.strip() == '' or dl <= 0 or nm <= 0 or cc.strip() == '' or cc.find('+') != -1 or len(pn) > 10 or len(pn) < 10:
         print('\n\n\tSeems Like You Have Given Wrong Inputs...')
-        input('\n\t\tPress Enter To Exit...\nPress CTRL+r to Restart')
+        input('\n\t\tPress Enter To Exit...\n')
         banner()
         start()
         exit()
