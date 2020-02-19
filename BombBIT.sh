@@ -30,7 +30,6 @@ toilet -f mono12 -F border Yash Navadiya
 echo -e "\e[4;34m This Bomber Was Created By Yash Navadiya \e[0m"
 echo -e "\e[1;34m For Any Queries Mail Me!!!\e[0m"
 echo -e "\e[1;32m           Mail: williamwillson4321@gmail.com \e[0m"
-echo -e "\e[4;32m   YouTube Page: https://www.youtube.com/c/GyanaTech \e[0m"
 echo " "
 echo -e "\e[4;31m Please Read Instruction Carefully !!! \e[0m"
 echo " "
@@ -108,7 +107,6 @@ echo -e "\e[4;31m That's All !!!\e[0m"
 echo -e "\e[1;34m For Any Queries Mail Me!!!\e[0m"
 echo -e "\e[1;32m           Mail: williamwillson4321@gmail.com \e[0m"
 echo -e "\e[1;32m       Whatsapp: https://bit.do/speedxgit \e[0m"
-echo -e "\e[4;32m   YouTube Page: https://www.youtube.com/c/GyanaTech \e[0m"
 echo "Press Enter To Go Home"
 read a3
 clear
@@ -121,7 +119,6 @@ toilet -f mono12 -F border SpeedX
 echo -e "\e[1;34m For Any Queries Mail Me!!!\e[0m"
 echo -e "\e[1;32m           Mail: williamwillson4321@gmail.com \e[0m"
 echo -e "\e[1;32m       Whatsapp: https://bit.do/speedxgit \e[0m"
-echo -e "\e[4;32m   YouTube Page: https://www.youtube.com/c/GyanaTech \e[0m"
 echo " "
 exit 0
 else
