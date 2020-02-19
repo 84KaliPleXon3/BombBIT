@@ -53,7 +53,6 @@ echo -e "\e[1;32m"
 echo 'Call Bomb By Yash Navadiya'> call.xxx
 python3 bomber.py call
 rm *.xxx >/dev/null 2>&1
-python3 bomber.py call
 exit 0
 elif [ $ch -eq 3 ];then
 clear
