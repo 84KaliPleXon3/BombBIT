@@ -10,6 +10,7 @@ import random
 import base64
 import urllib.request
 import urllib.parse
+import keyboard
 
 try:
     import requests
@@ -20,7 +21,7 @@ except ImportError:
 
 colors=['\033[1;31m','\033[1;32m','\033[1;33m','\033[1;34m','\033[1;35m','\033[1;36m']
 W='\033[0m'
-# The Credit For This Code Goes To SpeedX And All Other Contributors Listed At https://github.com/TheSpeedX/TBomb
+# The Credit For This Code Goes To SpeedX And All Other Contributors Listed At https://github.com/YashkumarNavadiya/BombBIT
 # If You Wanna Take Credits For This Code, Please Look Yourself Again
 
 country_codes = {
@@ -289,7 +290,7 @@ def checkinternet():
         res = True
     if res:
         print("\n\n\tIt seems That Your Internet Speed is Slow or You Are Using Proxies...")
-        print('\t\tTBomb Will Stop Now...\n\n')
+        print('\t\tBombBIT Will Stop Now...\n\n')
         banner()
         exit()
 
@@ -418,7 +419,7 @@ def start(target, counter, delay, ch, cc):
             api = random.choice(ch)
         except Exception:
             if cc == "91":
-                print('Sorry All APIs Have Expired Please Update TBomb')
+                print('Sorry All APIs Have Expired Please Update BombBIT')
                 input('Press Enter To Exit...')
                 exit()
             else:
@@ -510,7 +511,7 @@ if ver != verl:
     print('\tStarting Update...')
     update()
 print("Your Version is Up-To-Date")
-print('\n\n\t\t\tStarting TBomb...\n\n')
+print('\n\n\t\t\tStarting BombBIT...\n\n')
 try:
     noti = urllib.request.urlopen(
         "https:github.com/YashkumarNavadiya/BombBIT/.notify").read().decode('utf-8')
@@ -590,17 +591,16 @@ if nm > maxlim:
     nm = maxlim
 if not cc.strip() == "91":
     if type == 1:
-        print(
-            '\t\tSorry But Call Bombing is Currently Supported Only For Indian Numbers!!!!')
+        print('\t\tSorry But Call Bombing is Currently Supported Only For Indian Numbers!!!!')
         print()
-        input('Press Enter To Exit....\nPress CTRL+r to Restart')
+        input('Press Enter To Exit....\n')
         print('\n\n')
         banner()
         exit()
     cnt = 0
     if pn.strip() == '' or dl <= 0 or nm <= 0 or cc.strip() == '' or cc.find('+') != -1 or len(pn) > 10 or len(pn) < 10:
         print('\n\n\tSeems Like You Have Given Wrong Inputs...')
-        input('\n\t\tPress Enter To Exit...\nPress CTRL+r to Restart')
+        input('\n\t\tPress Enter To Exit...\n')
         banner()
         exit()
     ch = [0, 14, 15, 16]
@@ -624,7 +624,7 @@ if cbomb:
 if nm == 0:
     nt = int(input("\tNumber Of Threads(10 to 20) : "))
     if nt <= 0 or nt >= 30:
-        print('\tTBomb Shows Better Result in 10 to 25 Threads\n\t\tStill Continuing....')
+        print('\tBombBIT Shows Better Result in 10 to 25 Threads\n\t\tStill Continuing....')
     print("\n\nPlease Remember That This Is in Experimental Stage And Is Incredibly Fast...")
     t = [None] * nt
     print(random.choice(colors))
