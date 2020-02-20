@@ -479,7 +479,7 @@ def update():
     stuff_to_update = ['bomber.py', '.version']
     for fl in stuff_to_update:
         dat = urllib.request.urlopen(
-            "https://github.com/YashkumarNavadiya/BombBIT" + fl).read()
+            "https:github.com/YashkumarNavadiya/BombBIT/" + fl).read()
         file = open(fl, 'wb')
         file.write(dat)
         file.close()
@@ -499,7 +499,7 @@ except Exception:
     exit()
 print('\tChecking For Updates...')
 ver = urllib.request.urlopen(
-    "https://github.com/YashkumarNavadiya/BombBIT/.version").read().decode('utf-8')
+    "https:github.com/YashkumarNavadiya/BombBIT/.version").read().decode('utf-8')
 verl = ''
 try:
     verl = open(".version", 'r').read()
@@ -513,7 +513,7 @@ print("Your Version is Up-To-Date")
 print('\n\n\t\t\tStarting TBomb...\n\n')
 try:
     noti = urllib.request.urlopen(
-        "https://github.com/YashkumarNavadiya/BombBIT.notify").read().decode('utf-8')
+        "https:github.com/YashkumarNavadiya/BombBIT/.notify").read().decode('utf-8')
     noti = noti.upper().strip()
     if len(noti) > 10:
         print('\n\n\tNOTIFICATION: ' + noti + '\n\n')
@@ -547,21 +547,37 @@ try:
 except Exception:
     type = 0
 if type == 1:
-    nm = int(input("Enter Number of Calls To Send(Maximum 10): "))
+    try:
+    	nm = int(input("Enter Number of Calls To Send(Maximum 10): "))
+    except Exception:
+    	print("Don't Worry it will take by default values")
+    	nm=1
     if nm > 10:
         print("\t\tYou Have Entered " + str(nm) +
               ".\n\tNormalizing Value To 15")
         nm = 10
-    dl = float(input("Enter Delay time (in seconds) [Recommended 20 sec ] : "))
+    try:
+    	dl = float(input("Enter Delay time (in seconds) [Recommended 20 sec ] : "))
+    except Exception:
+    	print("Don't Worry it will take by default values")
+    	dl=20
 elif type == 0:
     if cc == "91":
-        nm = int(input("Enter Number of Messages To Send(0 For Unlimited): "))
-        dl = float(
-            input("Enter Delay time (in seconds) [Recommended 2 sec ] : "))
+        try:
+        	nm = int(input("Enter Number of Messages To Send(0 For Unlimited): "))
+        	dl = float(input("Enter Delay time (in seconds) [Recommended 2 sec ] : "))
+        except Exception:
+        	print("Don't Worry it will take by default values")
+        	nm=5
+        	dl=2
     else:
-        nm = int(input("Enter Number of Messages To Send: "))
-        dl = float(
-            input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
+    	try:
+    		nm = int(input("Enter Number of Messages To Send: "))
+    		dl = float(input("Enter Delay time (in seconds) [Recommended 10 sec ] : "))
+    	except Exception:
+    		print("Don't Worry it will take by default values")
+    		nm=10
+    		dl=10
 maxlim = 0
 if cc == "91":
     maxlim = 500
@@ -584,9 +600,8 @@ if not cc.strip() == "91":
     cnt = 0
     if pn.strip() == '' or dl <= 0 or nm <= 0 or cc.strip() == '' or cc.find('+') != -1 or len(pn) > 10 or len(pn) < 10:
         print('\n\n\tSeems Like You Have Given Wrong Inputs...')
-        input('\n\t\tPress Enter To Exit...\n')
+        input('\n\t\tPress Enter To Exit...\nPress CTRL+r to Restart')
         banner()
-        start()
         exit()
     ch = [0, 14, 15, 16]
     start(pn, nm, dl, ch, str(cc))
