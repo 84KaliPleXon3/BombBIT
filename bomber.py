@@ -19,7 +19,7 @@ except ImportError:
     print('Type \'pip install -r requirements.txt\' to install all required packages')
     exit()
 
-colors=['\033[1;31m','\033[1;32m','\033[1;33m','\033[1;34m','\033[1;35m','\033[1;36m']
+colors=['\033[1;31m','\033[1;32m','\0 33[1;33m','\033[1;34m','\033[1;35m','\033[1;36m']
 W='\033[0m'
 # The Credit For This Code Goes To SpeedX And All Other Contributors Listed At https://github.com/YashkumarNavadiya/BombBIT
 # If You Wanna Take Credits For This Code, Please Look Yourself Again
@@ -480,7 +480,7 @@ def update():
     stuff_to_update = ['bomber.py', '.version']
     for fl in stuff_to_update:
         dat = urllib.request.urlopen(
-            "https:github.com/YashkumarNavadiya/BombBIT/" + fl).read()
+            "https://github.com/YashkumarNavadiya/BombBIT/" + fl).read()
         file = open(fl, 'wb')
         file.write(dat)
         file.close()
@@ -500,7 +500,7 @@ except Exception:
     exit()
 print('\tChecking For Updates...')
 ver = urllib.request.urlopen(
-    "https:github.com/YashkumarNavadiya/BombBIT/.version").read().decode('utf-8')
+    "https://github.com/YashkumarNavadiya/BombBIT/.version").read().decode('utf-8')
 verl = ''
 try:
     verl = open(".version", 'r').read()
