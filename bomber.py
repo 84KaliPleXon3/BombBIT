@@ -514,7 +514,7 @@ print("Your Version is Up-To-Date")
 print('\n\n\t\t\tStarting BombBIT...\n\n')
 try:
     noti = urllib.request.urlopen(
-        "https:github.com/YashkumarNavadiya/BombBIT/.notify").read().decode('utf-8')
+        "https://github.com/YashkumarNavadiya/BombBIT/.notify").read().decode('utf-8')
     noti = noti.upper().strip()
     if len(noti) > 10:
         print('\n\n\tNOTIFICATION: ' + noti + '\n\n')
